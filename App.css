@@ -1,0 +1,274 @@
+/* ============================= */
+/*         VARIABLES             */
+/* ============================= */
+:root {
+  --bg-dark: #111;
+  --bg-light: #f5f5f5;
+  --text-dark: #f0f0f0;
+  --text-light: #111;
+  --neon-color: #0ff;
+  --neon-gradient: linear-gradient(90deg, #0ff, #f0f, #0ff);
+}
+
+/* ============================= */
+/*        BODY & CONTAINER       */
+/* ============================= */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--bg-dark);
+  color: var(--text-dark);
+  transition: background 0.3s, color 0.3s;
+}
+
+.light-mode {
+  background-color: var(--bg-light);
+  color: var(--text-light);
+}
+
+/* ============================= */
+/*         DASHBOARD             */
+/* ============================= */
+.dashboard-container {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 20px;
+  background: rgba(0,0,0,0.2);
+  border-radius: 15px;
+  box-shadow: 0 0 15px #0ff, 0 0 30px #f0f;
+}
+
+.dashboard-title {
+  font-size: 48px;
+  font-weight: bold;
+  text-align: center;
+  background: var(--neon-gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 20px;
+}
+
+/* ============================= */
+/*           BUTTONS             */
+/* ============================= */
+button {
+  cursor: pointer;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 20px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.logout-btn {
+  background: linear-gradient(45deg, #0ff, #f0f);
+  color: #fff;
+  box-shadow: 0 0 10px #0ff, 0 0 20px #f0f;
+}
+
+.logout-btn:hover {
+  box-shadow: 0 0 20px #0ff, 0 0 40px #f0f;
+}
+
+/* ============================= */
+/*        ADD HABIT FORM         */
+/* ============================= */
+.add-habit-form {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.add-habit-form input {
+  flex: 1;
+  padding: 10px;
+  border-radius: 8px 0 0 8px;
+  border: none;
+  outline: none;
+}
+
+.add-habit-form button {
+  border-radius: 0 8px 8px 0;
+  background: #0ff;
+  color: #111;
+  font-weight: bold;
+  transition: all 0.3s;
+}
+
+.add-habit-form button:hover {
+  box-shadow: 0 0 10px #0ff, 0 0 20px #f0f;
+}
+
+/* ============================= */
+/*         HABIT LIST            */
+/* ============================= */
+.habit-list {
+  margin-bottom: 20px;
+}
+
+.habit-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  background: rgba(255,255,255,0.05);
+  box-shadow: 0 0 5px #0ff, 0 0 10px #f0f;
+  transition: all 0.3s;
+}
+
+.habit-item.completed {
+  opacity: 0.6;
+  text-decoration: line-through;
+}
+
+.habit-item span {
+  cursor: pointer;
+}
+
+.delete-btn {
+  background: #ff0040;
+  color: #fff;
+}
+
+.delete-btn:hover {
+  box-shadow: 0 0 10px #ff0040, 0 0 20px #ff66a3;
+}
+
+/* ============================= */
+/*         STREAK DISPLAY        */
+/* ============================= */
+.streak {
+  color: #ff0;
+  font-weight: bold;
+  margin-left: 10px;
+}
+
+/* ============================= */
+/*       PROGRESS CHART          */
+/* ============================= */
+.progress-chart-container {
+  margin-top: 20px;
+  padding: 15px;
+  background: rgba(0,0,0,0.2);
+  border-radius: 10px;
+  box-shadow: 0 0 10px #0ff, 0 0 20px #f0f;
+}
+
+.habit-progress {
+  margin-bottom: 15px;
+}
+
+.habit-name {
+  font-weight: bold;
+  color: #0ff;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.progress-bar-bg {
+  width: 100%;
+  height: 12px;
+  background: #222;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.progress-bar-fill {
+  height: 100%;
+  border-radius: 6px;
+  transition: width 0.5s ease-in-out;
+  background: linear-gradient(90deg, #0ff, #f0f, #0ff);
+}
+
+/* ============================= */
+/*       AUTH FORM (LOGIN/REGISTER)      */
+/* ============================= */
+.auth-container {
+  max-width: 400px;
+  margin: 50px auto;
+  padding: 25px;
+  background: rgba(0,0,0,0.2);
+  border-radius: 12px;
+  box-shadow: 0 0 10px #0ff, 0 0 20px #f0f;
+  text-align: center;
+}
+
+.auth-container h2 {
+  margin-bottom: 20px;
+  background: var(--neon-gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.auth-form input {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+}
+
+.auth-form button {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 8px;
+  background: #0ff;
+  font-weight: bold;
+  color: #111;
+  box-shadow: 0 0 5px #0ff, 0 0 10px #f0f;
+}
+
+.auth-form button:hover {
+  box-shadow: 0 0 10px #0ff, 0 0 20px #f0f;
+}
+
+.link {
+  color: #0ff;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+/* ============================= */
+/*        REMEMBER ME            */
+/* ============================= */
+.remember-label {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  font-size: 14px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.remember-label input {
+  margin-left: 5px;
+  accent-color: #2563eb;
+}
+
+/* ============================= */
+/*        LIGHT MODE             */
+/* ============================= */
+.light-mode .dashboard-container,
+.light-mode .auth-container,
+.light-mode .add-habit-form input,
+.light-mode .habit-item {
+  background: rgba(255, 255, 255, 0.2);
+  color: var(--text-light);
+}
+
+.light-mode .progress-bar-bg {
+  background: #ddd;
+}
+
+.light-mode .progress-bar-fill {
+  background: linear-gradient(90deg, #00f, #f0f, #0ff);
+}
+
+.light-mode button {
+  color: #111;
+}
